@@ -1,0 +1,19 @@
+/*jshint multistr:true */
+var text = "annyeonghaseyo bangawoyo je irumun sam ieyo\
+irumi mwoyeyo? na do jonun sam ieyo bangawoyo.";
+var myName = "sam";
+var hits = [];
+
+for (var i=0; i < text.length; i++){
+    if (text[i]=== "s"){
+        for (var x = i; x < (myName.length +i); x++) {
+            hits.push(text[x]);
+            
+        }
+    }
+};
+if (hits.length === 0) {
+    console.log("Your name wasn't found!");
+} else {
+    console.log(hits);
+}
